@@ -1,9 +1,12 @@
 if __name__ == "__main__":
     import sys
-    from aoc2022.dia3 import soma_prioridades, soma_prioridades_grupos
+    from aoc2022.dia4 import (
+        numero_intervalos_completamente_contidos,
+        numero_intervalos_parcialmente_contidos,
+    )
 
     with open(sys.argv[1], "r") as f:
-        print(soma_prioridades(f))
+        print(numero_intervalos_completamente_contidos(f))
 
     with open(sys.argv[1], "r") as f:
-        print(soma_prioridades_grupos(f))
+        print(numero_intervalos_parcialmente_contidos(f))
