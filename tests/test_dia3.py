@@ -1,7 +1,7 @@
 from aoc2022 import dia3
 
 
-class TestDia2:
+class TestDia3:
     exemplo = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
