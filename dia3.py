@@ -1,8 +1,10 @@
 from io import StringIO
 
 
-_items = [*map(chr, range(ord('a'), ord('z') + 1)),
-          *map(chr, range(ord('A'), ord('Z') + 1))]
+_items = [
+    *map(chr, range(ord("a"), ord("z") + 1)),
+    *map(chr, range(ord("A"), ord("Z") + 1)),
+]
 
 
 def soma_prioridades_grupos(input):
@@ -26,6 +28,7 @@ def soma_prioridades_grupos(input):
 
     return soma
 
+
 def soma_prioridades(input):
     it = StringIO(input) if type(input) == str else input
 
@@ -38,6 +41,7 @@ def soma_prioridades(input):
         soma += _prioridade(i)
 
     return soma
+
 
 def _prioridade(i):
     return _items.index(i) + 1

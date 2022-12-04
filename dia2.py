@@ -8,13 +8,10 @@ class JKP(Enum):
     Tesoura = 3
 
 
-oponente = dict(A=JKP.Pedra,
-                B=JKP.Papel,
-                C=JKP.Tesoura)
+oponente = dict(A=JKP.Pedra, B=JKP.Papel, C=JKP.Tesoura)
 
-eu = dict(X=JKP.Pedra,
-          Y=JKP.Papel,
-          Z=JKP.Tesoura)
+eu = dict(X=JKP.Pedra, Y=JKP.Papel, Z=JKP.Tesoura)
+
 
 def vence(m):
     if m == JKP.Pedra:
@@ -24,8 +21,10 @@ def vence(m):
     else:
         return JKP.Pedra
 
+
 def empata(m):
     return m
+
 
 def perde(m):
     if m == JKP.Pedra:
@@ -35,9 +34,9 @@ def perde(m):
     else:
         return JKP.Papel
 
-frauda = dict(X=perde,
-              Y=empata,
-              Z=vence)
+
+frauda = dict(X=perde, Y=empata, Z=vence)
+
 
 def pontuacao_total(input):
     it = StringIO(input) if type(input) == str else input
@@ -49,6 +48,7 @@ def pontuacao_total(input):
 
     return pontuacao
 
+
 def pontuacao_total_fraudada(input):
     it = StringIO(input) if type(input) == str else input
 
@@ -58,6 +58,7 @@ def pontuacao_total_fraudada(input):
         pontuacao += resultado_partida(oponente[o], frauda[f](oponente[o]))
 
     return pontuacao
+
 
 def resultado_partida(o, e):
     if (o, e) == (JKP.Pedra, JKP.Tesoura):
@@ -76,5 +77,3 @@ def resultado_partida(o, e):
         pontos = 3
 
     return pontos + e.value
-
-

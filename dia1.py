@@ -38,9 +38,9 @@ def soma_tres_maiores_quantidades_calorias(input):
     tres_maiores = _insere(tres_maiores, soma, 3)
     return sum(tres_maiores)
 
+
 def _insere(xs, x, max):
     ys = xs[:]
     ys.append(x)
     ys.sort()
     return ys[-max:]
-    
