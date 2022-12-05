@@ -1,12 +1,9 @@
 if __name__ == "__main__":
     import sys
-    from aoc2022.dia4 import (
-        numero_intervalos_completamente_contidos,
-        numero_intervalos_parcialmente_contidos,
-    )
+    from aoc2022.dia5 import topo_pilhas, topo_pilhas_9001
 
     with open(sys.argv[1], "r") as f:
-        print(numero_intervalos_completamente_contidos(f))
+        print(topo_pilhas(f))
 
     with open(sys.argv[1], "r") as f:
-        print(numero_intervalos_parcialmente_contidos(f))
+        print(topo_pilhas_9001(f))
