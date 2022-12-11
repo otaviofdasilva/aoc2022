@@ -1,12 +1,11 @@
 if __name__ == "__main__":
     import sys
-    from aoc2022.dia6 import (
-        posicao_primeiro_marcador,
-        posicao_primeiro_marcador_mensagem,
-    )
+    from aoc2022.dia11 import *
 
     with open(sys.argv[1], "r") as f:
-        print(posicao_primeiro_marcador(f.readline()))
+        print(produto_macacos_mais_ativos(f, 2, 20))
 
+    """
     with open(sys.argv[1], "r") as f:
-        print(posicao_primeiro_marcador_mensagem(f.readline()))
+        print(f)
+    """
